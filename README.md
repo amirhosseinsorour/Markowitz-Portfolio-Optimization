@@ -4,7 +4,7 @@ An Excel Solver project comparing portfolio allocations across five U.S. technol
 
 Developed for **AMOD 5530: Portfolio & Risk Management** at **Trent University**, April 2026.
 
-**[Excel workbook](model/portfolio_optimization.xlsx)** · **[Project report](reports/portfolio_report.pdf)** · **[Workbook guide](docs/workbook_guide.md)**
+**[Excel workbook](model/portfolio_optimization.xlsx)** · **[Project report](reports/portfolio_report.pdf)** · **[Workbook guide](docs/workbook_guide.md)** . **[Calculation tables (PDF)](reports/portfolio_calculations.pdf)**
 
 ## Objective
 
@@ -53,8 +53,6 @@ The stored Solver allocations are:
 
 The minimum-variance allocation emphasizes MSFT, while the maximum-Sharpe allocation concentrates on GOOG and META. This illustrates how an optimization objective can produce a concentrated portfolio even when several assets are available.
 
-An independent numerical check of the supplied price snapshot reproduced these allocations to rounding precision. It did not run Excel Solver or refresh Excel's external data connections. The source workbook's covariance normalization and displayed correlation matrix need the corrections documented in the [calculation notes](docs/calculation_notes.md).
-
 ## Simulated portfolio opportunity set
 
 ![Original Excel chart of simulated portfolio risk and return](figures/portfolio_opportunity_set.png)
@@ -70,14 +68,7 @@ The original chart displays 100,000 random portfolios. Its embedded title says �
 | `figures/portfolio_opportunity_set.png` | Original Excel simulation chart |
 | `docs/workbook_guide.md` | Cell references, Solver objectives, and instructions for navigating the model |
 | `docs/calculation_notes.md` | Identified formula corrections and the effect on reported risk measures |
-
-## Open and reproduce
-
-Download the workbook and open it in desktop Excel. Enable the Solver add-in using [Microsoft's instructions](https://support.microsoft.com/en-us/excel/load-the-solver-add-in-in-excel), then follow the [workbook guide](docs/workbook_guide.md).
-
-Refreshing `STOCKHISTORY` requires a supported Microsoft 365 subscription. The Treasury-yield input uses an Excel linked financial data type. This review used the stored yield values and did not verify live refresh in Excel. Record a fixed, documented risk-free assumption when reproducing the historical comparison.
-
-The workbook in this initial package preserves the original calculations. Its sample-count and correlation formulas should be corrected, and affected report values and figures reconciled, before describing the entire model as validated.
+| `reports/portfolio_calculations.pdf` | PDF snapshot of the workbook, including stock prices, daily returns, covariance and correlation matrices, portfolio results, and the simulation chart. |
 
 ## Interpretation and limitations
 
